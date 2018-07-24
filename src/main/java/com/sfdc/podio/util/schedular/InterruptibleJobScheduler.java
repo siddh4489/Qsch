@@ -52,14 +52,7 @@ public class InterruptibleJobScheduler {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }*/
-            System.out.println("-->" + jobDetail.getKey());
-            //scheduler.getJobDetail(jobDetail.getKey());
-            //scheduler.interrupt(jobDetail.getKey());
-
-            if (jobDetail.getKey().toString().equals("myGroup.myJob")) {
-                Scheduler scheduler12 = schedulerFactory.getScheduler();
-                scheduler12.shutdown();
-            }
+           
 
         } catch (Exception e) {
 
