@@ -25,8 +25,8 @@ public class InterruptibleJobScheduler {
     public static Scheduler scheduler;
 
     public void Start() throws SchedulerException {
-        this.scheduler = schedulerFactory.getScheduler();
         this.schedulerFactory = new StdSchedulerFactory();
+        this.scheduler = schedulerFactory.getScheduler();
         try {
             JobDetail jobDetail = JobBuilder.newJob(QsendPodioToSalesforce.class).withIdentity("myJob", "myGroup").build();
             //JobDetail job = new JobDetail();
